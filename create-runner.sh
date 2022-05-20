@@ -170,7 +170,7 @@ fi
 echo
 echo "Configuring ${runner_name} @ $runner_url"
 echo "./config.sh --unattended --url $runner_url --token *** --name $runner_name ${labels:+--labels $labels} ${runner_group:+--runnergroup \"$runner_group\"}"
-sudo -E -u ${svc_user} ./config.sh --unattended --url $runner_url --token $RUNNER_TOKEN --name $runner_name ${labels:+--labels $labels} ${runner_group:+--runnergroup "$runner_group"}
+sudo -E -u ${svc_user} ./config.sh --unattended --ephemeral --url $runner_url --token $RUNNER_TOKEN --name $runner_name ${labels:+--labels $labels} ${runner_group:+--runnergroup "$runner_group"}
 
 #---------------------------------------
 # Configuring as a service
